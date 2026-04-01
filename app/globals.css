@@ -45,3 +45,11 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
 }
+:root {
+  --primary: #ef4444; /* red */
+}
+
+body {
+  background-color: #050505;
+  color: white;
+}
