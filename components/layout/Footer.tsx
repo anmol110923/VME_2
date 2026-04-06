@@ -2,9 +2,9 @@ import Link from "next/link";
 import { Instagram, MessageCircle, Youtube } from "lucide-react";
 
 const socialLinks = [
-  { href: "https://instagram.com", icon: Instagram, label: "Instagram" },
-  { href: "https://wa.me", icon: MessageCircle, label: "WhatsApp" },
-  { href: "https://youtube.com", icon: Youtube, label: "YouTube" },
+  { href: "https://instagram.com/meraipu", icon: Instagram, label: "Instagram" },
+  { href: "https://chat.whatsapp.com/LwrEPT11JrR5HpujFFOat4?mode=gi_t", icon: MessageCircle, label: "WhatsApp" },
+  { href: "https://youtube.com/@meraipu", icon: Youtube, label: "YouTube" },
 ];
 
 export function Footer() {
