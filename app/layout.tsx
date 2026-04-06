@@ -21,7 +21,7 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: "meraipu — Your IPU. Simplified.",
-  description: "Guru Gobind Singh Indraprastha University syllabus information, practical files, and PYQs.",
+  description: "GGSIPU syllabus information, practical files, and PYQs.",
 };
 
 export default function RootLayout({
