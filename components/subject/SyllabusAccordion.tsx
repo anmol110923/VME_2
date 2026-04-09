@@ -25,16 +25,20 @@ export function SyllabusAccordion({ units }: SyllabusAccordionProps) {
         const isOpen = openIndex === i;
         const colorClass = UNIT_COLORS[i % UNIT_COLORS.length];
         const wordCount = unit.content?.split(" ").length ?? 0;
-        const status = wordCount > 80 ? "Detailed" : wordCount > 40 ? "Moderate" : "Brief";
+        const status =
+          wordCount > 80 ? "Detailed" : wordCount > 40 ? "Moderate" : "Brief";
         const statusColor =
           status === "Detailed"
             ? "bg-green-500/10 text-green-600 dark:text-green-400"
             : status === "Moderate"
-            ? "bg-yellow-500/10 text-yellow-600 dark:text-yellow-400"
-            : "bg-muted text-muted-foreground";
+              ? "bg-yellow-500/10 text-yellow-600 dark:text-yellow-400"
+              : "bg-muted text-muted-foreground";
 
         return (
-          <div key={i} className={`bg-card transition-colors duration-200 ${isOpen ? "bg-muted/30" : ""}`}>
+          <div
+            key={i}
+            className={`bg-card transition-colors duration-200 ${isOpen ? "bg-muted/30" : ""}`}
+          >
             {/* Entity row — like EntityList.Item */}
             <button
               type="button"
@@ -49,10 +53,12 @@ export function SyllabusAccordion({ units }: SyllabusAccordionProps) {
               {/* Title + meta */}
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-2 flex-wrap">
-                  <span className="text-sm font-medium text-foreground truncate">
+                  <span className="text-base font-medium text-foreground truncate">
                     {unit.title}
                   </span>
-                  <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${statusColor}`}>
+                  <span
+                    className={`text-xs px-2 py-0.5 rounded-full font-medium ${statusColor}`}
+                  >
                     {status}
                   </span>
                 </div>
@@ -63,9 +69,9 @@ export function SyllabusAccordion({ units }: SyllabusAccordionProps) {
 
               {/* Unit number + chevron */}
               <div className="flex items-center gap-3 shrink-0">
-                <span className="text-xs text-muted-foreground hidden sm:block">
+                {/* <span className="text-xs text-muted-foreground hidden sm:block">
                   Unit {i + 1}
-                </span>
+                </span> */}
                 <ChevronDown
                   className={`h-4 w-4 text-muted-foreground transition-transform duration-200 ${
                     isOpen ? "rotate-180" : ""
@@ -81,9 +87,9 @@ export function SyllabusAccordion({ units }: SyllabusAccordionProps) {
               }`}
             >
               <div className="overflow-hidden">
-                <div className="px-4 pb-4 pt-1 ml-14">
-                  <div className="rounded-lg bg-muted/50 border border-border p-4">
-                    <p className="text-sm text-muted-foreground whitespace-pre-line leading-relaxed">
+                <div className="px-4 pb-4 pt-2">
+                  <div className="rounded-lg bg-muted/90 border border-border p-4">
+                    <p className="text-base text-muted-foreground whitespace-pre-line leading-relaxed">
                       {unit.content}
                     </p>
                   </div>

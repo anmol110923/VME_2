@@ -58,7 +58,7 @@ export function PdfCard({ file }: PdfCardProps) {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-1.5 rounded-lg bg-gradient-to-r from-cyan-500 to-primary px-3 py-1.5 text-xs font-semibold text-white shadow-sm hover:shadow-md hover:from-cyan-400 hover:to-primary transition-all duration-200"
+              className="inline-flex items-center gap-1.5 rounded-lg bg-gradient-to-r from-cyan-500 to-slate-950 px-3 py-1.5 text-xs font-semibold text-white shadow-sm hover:shadow-md transition-all duration-200"
             >
               <Eye className="h-3.5 w-3.5" />
               View
