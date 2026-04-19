@@ -49,11 +49,33 @@ export default function RootLayout({
     </html>
   );
 }
+
+
 import Script from 'next/script';
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <body>
+        {children}
+
+        {/* Google AdSense */}
+        <Script
+          async
+          strategy="afterInteractive"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5602912928391127"
+          crossOrigin="anonymous"
+        />
+      </body>
+    </html>
+  );
+}
+import Script from 'next/script';
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      
       <body>
         {children}
 
