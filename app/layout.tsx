@@ -36,7 +36,7 @@ export default function RootLayout({
         {/* ✅ Google AdSense */}
         <Script
           async
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5602912928391127"
           crossOrigin="anonymous"
         />
@@ -44,7 +44,7 @@ export default function RootLayout({
         {/* ✅ Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-76MEWXKNTD"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
         />
         <Script id="ga-script" strategy="afterInteractive">
           {`
