@@ -28,14 +28,11 @@ export function PdfCard({ file }: PdfCardProps) {
       whileHover={{ y: -3, transition: { duration: 0.2 } }}
       className="group relative rounded-2xl border border-border bg-card overflow-hidden shadow-sm hover:shadow-lg hover:border-primary/40 transition-shadow duration-300"
     >
-      {/* Animated gradient top bar */}
       <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-cyan-500 via-primary to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-      {/* Subtle background glow on hover */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
       <div className="relative p-5 flex items-center gap-4">
-        {/* Icon block */}
         <motion.div
           whileHover={{ scale: 1.1, rotate: -4 }}
           transition={{ type: "spring", stiffness: 400, damping: 12 }}
@@ -44,14 +41,12 @@ export function PdfCard({ file }: PdfCardProps) {
           <FileText className="h-5 w-5" />
         </motion.div>
 
-        {/* Title + actions */}
         <div className="min-w-0 flex-1">
           <p className="text-sm font-semibold text-foreground leading-snug line-clamp-2 mb-3 group-hover:text-primary transition-colors duration-200">
             {file.title}
           </p>
 
           <div className="flex items-center gap-2">
-            {/* View button */}
             <motion.a
               href={file.url}
               target="_blank"
@@ -64,7 +59,6 @@ export function PdfCard({ file }: PdfCardProps) {
               View
             </motion.a>
 
-            {/* Download button */}
             <motion.a
               href={downloadUrl}
               target="_blank"
@@ -80,7 +74,6 @@ export function PdfCard({ file }: PdfCardProps) {
         </div>
       </div>
 
-      {/* Floating particles on hover */}
       {[...Array(4)].map((_, i) => (
         <motion.div
           key={i}
@@ -90,7 +83,7 @@ export function PdfCard({ file }: PdfCardProps) {
             bottom: "10%",
           }}
           animate={{
-            y: [-0, -20, -0],
+            y: [0, -20, 0],
             opacity: [0, 0.6, 0],
           }}
           transition={{
@@ -102,28 +95,5 @@ export function PdfCard({ file }: PdfCardProps) {
         />
       ))}
     </motion.div>
-  );
-}
-
-'use client';
-
-import { useEffect } from 'react';
-
-export default function AdUnit() {
-  useEffect(() => {
-    try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (e) {}
-  }, []);
-
-  return (
-    <ins
-      className="adsbygoogle"
-      style={{ display: 'block' }}
-      data-ad-client="ca-pub-5602912928391127"
-      data-ad-slot="YOUR_AD_SLOT_ID"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
-    />
   );
 }
