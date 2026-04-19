@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/providers/ThemeProvider";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { DottedSurface } from "@/components/dotted-surface";
-import { cn } from "@/lib/utils";
+import Script from "next/script";
 
 const syne = Syne({
   variable: "--font-syne",
@@ -26,64 +26,22 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" suppressHydrationWarning className="font-sans">
       <body className={`${syne.variable} ${dmSans.variable}`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <DottedSurface className="fixed inset-0 -z-10" />
-          <div className="min-h-screen flex flex-col">
-            <Navbar />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
-        </ThemeProvider>
-      </body>
-    </html>
-  );
-}
-
-
-import Script from 'next/script';
-
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body>
-        {children}
-
-        {/* Google AdSense */}
+        
+        {/* ✅ Google AdSense */}
         <Script
           async
           strategy="afterInteractive"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5602912928391127"
           crossOrigin="anonymous"
         />
-      </body>
-    </html>
-  );
-}
-import Script from 'next/script';
 
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <head>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5602912928391127"
-     crossorigin="anonymous"></script>
-      </head>
-      
-      <body>
-        {children}
-
-        {/* Google Analytics */}
+        {/* ✅ Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-76MEWXKNTD"
           strategy="afterInteractive"
@@ -96,6 +54,22 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-76MEWXKNTD');
           `}
         </Script>
+
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <DottedSurface className="fixed inset-0 -z-10" />
+          
+          <div className="min-h-screen flex flex-col">
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
+
+        </ThemeProvider>
       </body>
     </html>
   );
