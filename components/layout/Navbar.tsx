@@ -57,7 +57,7 @@ export function Navbar() {
       <div className="md:hidden border-t border-border px-4 py-3">
         <nav className="flex flex-col gap-3">
           
-            href="https://deadline.meraipu.in"
+            href="https://deadlines.meraipu.in"
             className="text-sm font-medium text-foreground/80 hover:text-primary transition"
           >
             Deadline
