@@ -17,6 +17,18 @@ export function Navbar() {
 
         {/* Navigation Links */}
         <nav className="hidden md:flex items-center gap-8">
+          
+            href="https://deadline.meraipu.in"
+            className="text-sm font-medium text-foreground/80 hover:text-primary transition"
+          >
+            Deadline
+          </a>
+          
+            href="https://pdfguru.meraipu.in"
+            className="text-sm font-medium text-foreground/80 hover:text-primary transition"
+          >
+            PDF Guru
+          </a>
           <Link
             href="/about"
             className="text-sm font-medium text-foreground/80 hover:text-primary transition"
@@ -44,6 +56,18 @@ export function Navbar() {
       {/* Mobile Menu (Optional - for mobile responsiveness) */}
       <div className="md:hidden border-t border-border px-4 py-3">
         <nav className="flex flex-col gap-3">
+          
+            href="https://deadline.meraipu.in"
+            className="text-sm font-medium text-foreground/80 hover:text-primary transition"
+          >
+            Deadline
+          </a>
+          
+            href="https://pdfguru.meraipu.in"
+            className="text-sm font-medium text-foreground/80 hover:text-primary transition"
+          >
+            PDF Guru
+          </a>
           <Link
             href="/about"
             className="text-sm font-medium text-foreground/80 hover:text-primary transition"
