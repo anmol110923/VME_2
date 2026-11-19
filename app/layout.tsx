@@ -22,6 +22,9 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "meraipu — Your IPU. Simplified.",
   description: "GGSIPU syllabus information, practical files, and PYQs.",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({
